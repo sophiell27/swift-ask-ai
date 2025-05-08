@@ -1,0 +1,25 @@
+# Xcode
+.xcworkspace/
+.xcodeproj/project.xcworkspace/
+.xcodeproj/xcuserdata/
+DerivedData/
+
+# Build files
+build/
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Other
+*.swp
+.DS_Store
+.idea/
+.vscode/
