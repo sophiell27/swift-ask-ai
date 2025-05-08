@@ -1,0 +1,30 @@
+name: Swift CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on PRs targeting the main branch
+
+jobs:
+  build:
+    runs-on: macos-latest  # Use the latest macOS runner for Swift
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Swift
+      uses: actions/setup-swift@v1
+
+    - name: Set environment variables
+      run: |
+        echo "API_KEY=${{ secrets.API_KEY }}" 
+        echo "CHAT_URL=${{ secrets.CHAT_URL }}"
+
+    - name: Build and test Swift project
+      run: swift build && swift test
+
+          
