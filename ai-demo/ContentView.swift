@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    /* api key is invalid */
-    
     @State private var inputText: String = ""
     @State private var responseText: String = ""
     @State private var isLoading: Bool  = false
